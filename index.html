@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <section class="mx-auto w-3/4 flex flex-col justify-center items-center bg-red-300 mt-36 p-6 rounded-sm">
+        <input id="enter-amount" type="number" placeholder="Type here" class="input w-1/4  mb-4" />
+       <div class="flex">
+        <div class="w-1/2 mr-2">
+            <input id="lock-btn" type="text" placeholder="Type SCRIPT" class="input w-full max-w-xs mb-4" />
+        </div>
+        <div class="w-1/2">
+            <button id="discount-btn" disabled class="btn mb-4 "> Apply 30% discount </button>
+        </div>
+       </div>
+        <h1 class="text-lg font-semibold text-white">payble amount is <span id="payable-amount">0</span> </h1>
+    </section>
+
+    <!-- <script>
+        document.getElementById('lock-btn').addEventListener('keyup', function(event){
+            const typedText= event.target.value
+            // const typedText = typedTextId.value
+            console.log(typedText)
+
+            if(typedText === 'SCRIPT'){
+                document.getElementById('discount-btn').removeAttribute ('disabled')
+            } else{
+                document.getElementById('discount-btn').setAttribute ('disabled', true)
+            }
+
+        })
+        document.getElementById('discount-btn').addEventListener('click',function(){
+            const enterAmountId = document.getElementById('enter-amount')
+            // enterAmountId = event.target.value
+            const enterAmount = parseFloat(enterAmountId.value)
+            
+            const discountAmount = enterAmount * 30 / 100
+            const paybleAmount = enterAmount - discountAmount
+            // console.log(paybleAmount)
+
+            const payableAmontId = document.getElementById('payable-amount')
+            const payableAmount = parseFloat(payableAmontId.innerText)
+            payableAmontId.innerText = paybleAmount
+            
+            
+        })
+    </script> -->
+
+    
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./discount.js"></script>
+</body>
+</html>
